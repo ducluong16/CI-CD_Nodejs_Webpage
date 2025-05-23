@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu - Demo Node.js</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f4f4f4;
+      }
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      nav {
+        margin-bottom: 20px;
+      }
+      nav a {
+        margin-right: 15px;
+        padding: 8px 16px;
+        background: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+      nav a:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="/">Trang chủ</a>
+        <a href="/about">Giới thiệu</a>
+      </nav>
+
+      <h1>📋 Giới thiệu về dự án</h1>
+
+      <h2>Mục tiêu:</h2>
+      <p>
+        Dự án này được tạo ra để demonstratie quy trình CI/CD hoàn chỉnh cho ứng
+        dụng Node.js.
+      </p>
+
+      <h2>Công nghệ sử dụng:</h2>
+      <ul>
+        <li><strong>Backend:</strong> Node.js + Express.js</li>
+        <li><strong>CI/CD:</strong> Jenkins</li>
+        <li><strong>Container:</strong> Docker</li>
+        <li><strong>Source Control:</strong> GitHub</li>
+        <li><strong>Registry:</strong> Docker Hub</li>
+      </ul>
+
+      <h2>Quy trình CI/CD:</h2>
+      <ol>
+        <li>Push code lên GitHub</li>
+        <li>Jenkins tự động pull code</li>
+        <li>Cài đặt dependencies (npm install)</li>
+        <li>Kiểm tra bảo mật (OWASP)</li>
+        <li>Build Docker image</li>
+        <li>Push image lên Docker Hub</li>
+        <li>Deploy container</li>
+      </ol>
+
+      <p><em>Version: 1.0.0</em></p>
+    </div>
+  </body>
+</html>
