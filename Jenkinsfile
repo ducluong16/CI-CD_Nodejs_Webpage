@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         nodejs "NodeJS 24"
-        dependency-check "DP"
+        
     }
 
     stages {
@@ -23,7 +23,8 @@ pipeline {
 
         stage('Dependency Check') {
             steps {
-                dependencyCheck odcInstallation: 'DP', additionalArguments: '-f "HTML, XML, CSV" -s nodejs-webapp'
+                dependencyCheck additionalArguments: ' -- scan ./ -- format HTML ', odcInstallation: 'DP'
+                dependencyCheckPublisher pattern: ' ** /dependency-check-report.xml'
             }
         }
 
