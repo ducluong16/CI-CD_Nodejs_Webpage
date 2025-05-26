@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         nodejs "NodeJS 24"
-        dependencyCheck "DP" 
+        
     }
     stages {
         stage('Checkout') {
@@ -26,7 +26,7 @@ pipeline {
       }
          stage('Docker Build and Push'){
             steps{
-                withDockerRegistry(credentialsId: '9585bea6-924a-40da-891c-b5b5a67f2bba', toolName: 'Docker') {
+                withDockerRegistry(credentialsId: '9585bea6-924a-40da-891c-b5b5a67f2bba') {
                     sh ' docker build -t ducluong16/nodejs:1.0 .'
                     sh ' docker push ducluong16/nodejs:1.0 '
 }
