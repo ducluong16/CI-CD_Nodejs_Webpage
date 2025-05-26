@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         nodejs "NodeJS 24"
-        dependencyCheck "DP"
+        dependency-check "DP"
     }
 
     stages {
