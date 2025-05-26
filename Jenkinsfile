@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Dependency Check') {
         steps {
-            dependencyCheck additionalArguments: '-f "HTML, XML,CSV" -s .'
+            dependencyCheck odcInstallation: 'DP', additionalArguments: '-f "HTML, XML,CSV" -s .'
         }
       }
          stage('Docker Build and Push'){
