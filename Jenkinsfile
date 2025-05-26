@@ -28,7 +28,7 @@ pipeline {
 
         stage('Docker Build and Push') {
             steps {
-                withDockerRegistry(credentialsId: '9585bea6-924a-40da-891c-b5b5a67f2bba') {
+                withDockerRegistry(credentialsId: '9585bea6-924a-40da-891c-b5b5a67f2bba , url: 'https://index.docker.io/v1/') {
                     sh 'docker build -t ducluong16/nodejs:1.0 .'
                     sh 'docker push ducluong16/nodejs:1.0'
                 }
